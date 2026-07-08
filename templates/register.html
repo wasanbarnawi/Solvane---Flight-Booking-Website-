@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1N1EF0N2QY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1N1EF0N2QY');
+</script>
+    <!-- نوع الترميز -->
+    <meta charset="UTF-8">
+    <!-- عنوان الصفحة -->
+    <title>Register | Solvane</title>
+    <!-- ربط CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- شريط التنقل -->
+<nav>
+    <div class="nav-container">
+        <a href="{{ url_for('home') }}" class="logo">
+            <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Logo">
+            <span>Solvane</span>
+        </a>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('trips') }}">Trips</a>
+            <a href="{{ url_for('trip_details') }}">Trip Details</a>
+            <a href="{{ url_for('booking') }}">Booking</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="nav-auth">
+            <a href="{{ url_for('login') }}" class="btn-nav">Login</a>
+        </div>
+    </div>
+</nav>
+
+<!-- نموذج إنشاء حساب -->
+<section class="section">
+    <div class="form-page">
+        <h2>Create Account</h2>
+        <!-- الفورم يحفظ البيانات في قاعدة البيانات -->
+        <form method="POST" action="{{ url_for('register') }}" novalidate>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Min 6 characters" required>
+            </div>
+            <button type="submit" class="btn-main">Register</button>
+        </form>
+        
+        {% if success %}
+        <p style="color:green; margin-top:10px;">{{ success }}</p>
+        {% endif %}
+    </div>
+</section>
+
+<!-- الفوتر -->
+<footer>
+    <p>©️ 2025 Solvane. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

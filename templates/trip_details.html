@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1N1EF0N2QY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1N1EF0N2QY');
+</script>
+    <!-- نوع الترميز -->
+    <meta charset="UTF-8">
+    <!-- عنوان الصفحة -->
+    <title>Trip Details | Solvane</title>
+    <!-- ربط CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- شريط التنقل -->
+<nav>
+    <div class="nav-container">
+        <!-- اللوقو -->
+        <a href="{{ url_for('home') }}" class="logo">
+            <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Logo">
+            <span>Solvane</span>
+        </a>
+        <!-- روابط الصفحات -->
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('trips') }}">Trips</a>
+            <a href="{{ url_for('trip_details') }}">Trip Details</a>
+            <a href="{{ url_for('booking') }}">Booking</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <!-- زر الدخول -->
+        <div class="nav-auth">
+            <a href="{{ url_for('login') }}" class="btn-nav">Login</a>
+        </div>
+    </div>
+</nav>
+
+<!-- عنوان الصفحة -->
+<section class="section">
+    <h2>Trip Details</h2>
+</section>
+
+<!-- المالديف -->
+<section class="trip-container">
+    <img src="{{ url_for('static', filename='maldives.jpeg') }}" alt="Maldives Trip">
+    <div class="trip-info">
+        <h2>Maldives Adventure</h2>
+        <p>Enjoy a luxury trip to the Maldives with beautiful beaches and relaxing resorts.</p>
+        <ul>
+            <li><strong>Duration:</strong> 5 Days</li>
+            <li><strong>Price:</strong> $1200</li>
+            <li><strong>Location:</strong> Maldives</li>
+            <li><strong>Hotel:</strong> 5 Stars Resort</li>
+        </ul>
+        <a href="{{ url_for('booking') }}" class="btn-main">Book Now</a>
+    </div>
+</section>
+
+<!-- باريس -->
+<section class="trip-container">
+    <img src="{{ url_for('static', filename='paris.jpeg') }}" alt="Paris Trip">
+    <div class="trip-info">
+        <h2>Paris Vacation</h2>
+        <p>Discover the beauty of Paris and visit famous attractions like the Eiffel Tower.</p>
+        <ul>
+            <li><strong>Duration:</strong> 7 Days</li>
+            <li><strong>Price:</strong> $1500</li>
+            <li><strong>Location:</strong> France</li>
+            <li><strong>Hotel:</strong> 4 Stars Hotel</li>
+        </ul>
+        <a href="{{ url_for('booking') }}" class="btn-main">Book Now</a>
+    </div>
+</section>
+
+<!-- تركيا -->
+<section class="trip-container">
+    <img src="{{ url_for('static', filename='turkey.jpeg') }}" alt="Turkey Trip">
+    <div class="trip-info">
+        <h2>Turkey Experience</h2>
+        <p>Explore Istanbul and enjoy Turkish culture, delicious food, and historical places.</p>
+        <ul>
+            <li><strong>Duration:</strong> 6 Days</li>
+            <li><strong>Price:</strong> $1000</li>
+            <li><strong>Location:</strong> Turkey</li>
+            <li><strong>Hotel:</strong> 5 Stars Hotel</li>
+        </ul>
+        <a href="{{ url_for('booking') }}" class="btn-main">Book Now</a>
+    </div>
+</section>
+
+<!-- الفوتر -->
+<footer>
+    <p>©️ 2025 Solvane. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

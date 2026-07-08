@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1N1EF0N2QY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1N1EF0N2QY');
+</script>
+    <!-- نوع الترميز -->
+    <meta charset="UTF-8">
+    <!-- عنوان الصفحة -->
+    <title>Home | Solvane</title>
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- شريط التنقل -->
+<nav>
+    <div class="nav-container">
+        <!-- اللوقو -->
+        <a href="{{ url_for('home') }}" class="logo">
+            <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Solvane Logo">
+            <span>Solvane</span>
+        </a>
+        <!-- روابط الصفحات -->
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('trips') }}">Trips</a>
+            <a href="{{ url_for('trip_details') }}">Trip Details</a>
+            <a href="{{ url_for('booking') }}">Booking</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <!-- زر تسجيل الدخول -->
+        <div class="nav-auth">
+            <a href="{{ url_for('login') }}" class="btn-nav">Login</a>
+        </div>
+    </div>
+</nav>
+
+<!-- القسم الرئيسي -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Book Your Dream Trip</h1>
+        <p>Discover amazing destinations with easy and fast booking.</p>
+        <a href="{{ url_for('trips') }}" class="btn-main">Explore Trips</a>
+    </div>
+</section>
+
+<!-- قسم المميزات -->
+<section class="section">
+    <h2>Why Choose Us?</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Easy Booking</h3>
+            <p>Book your trip in simple steps.</p>
+        </div>
+        <div class="card">
+            <h3>Best Prices</h3>
+            <p>Affordable trips for everyone.</p>
+        </div>
+        <div class="card">
+            <h3>Support</h3>
+            <p>We are ready to help you anytime.</p>
+        </div>
+    </div>
+</section>
+
+<!-- الفوتر -->
+<footer>
+    <p>©️ 2025 Solvane. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
